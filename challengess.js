@@ -42,7 +42,7 @@ const produits = [
     }
 ];
 
-//challenge 1
+//challenge 1;
 // • Affiche la première catégorie et le nombre initial de catégories.
 console.log(categories[0]);
 console.log(categories.length);
@@ -56,10 +56,27 @@ for(let i = 0 ; i < categories.length ; i++)
     }
 }
 // • Retire la dernière catégorie et affiche le tableau final.
-
 categories.pop();
 console.log(categories);
 
+
+
+
+//challenge 2;
+// Affiche le nom et la ville de la boutique.
+console.log(boutique.nom);
+console.log(boutique.ville);
+
+// • Ajoute la propriété devise avec la valeur "MAD".
+boutique.devise = "MAD";
+console.log(boutique);
+
+// • Passe ouverte à false et affiche le statut « Fermée » à partir de cette valeur.
+boutique.ouverte = false;
+if(boutique.ouverte === false)
+{
+    console.log("Fermée");
+}
 
 
 

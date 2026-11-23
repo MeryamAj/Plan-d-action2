@@ -127,6 +127,7 @@ console.log(produits);
 
 
 
+//challenge 4;
 // • Avec filter(), garde les produits dont le stock est supérieur à 0.
 let produitssuperieur = produits.filter((element) => element.stock > 0);
 console.log("superior 0 : ", produitssuperieur);
@@ -134,8 +135,20 @@ console.log("superior 0 : ", produitssuperieur);
 // supérieur à 0.
 let produitscategorie = produitssuperieur.filter((element) => element.categorie === "Papeterie");
 console.log("les produits de la catégorie « Papeterie » : ", produitscategorie);
-// Indice. La fonction passée à filter() répond vrai ou faux pour chaque produit.
-// À vérifier. En rayon, tu obtiens Cahier, Trousse, Sac et Classeur. En papeterie, tu obtiens Cahier et Classeur.
+
+
+
+
+
+
+//challenge 5
+// • Avec map(), crée un tableau qui contient uniquement les noms.
+let noms = produits.map((element) => element.nom );
+console.log("noms : ", noms);
+// • Avec un second map(), crée un tableau d’étiquettes au format « Nom - Prix DH ».
+let noms_prix = produits.map((element) => `${element.nom} - ${element.prix} DH`);
+console.log("noms_prix : ",noms_prix )
+
 
 
 

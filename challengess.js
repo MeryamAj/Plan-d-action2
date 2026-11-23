@@ -80,6 +80,46 @@ if(boutique.ouverte === false)
 
 
 
+//challenge 3;
+// • Crée un nouveau tableau et copie chaque objet produit avec une boucle et la syntaxe spread.
+const produits2 = [];
+for(let i = 0 ; i < produits.length ; i++)
+{
+    let produit  = {...produits[i]};
+    produits2.push(produit);
+}
+console.log(produits2);
+// • Affiche le nom et le stock de chaque produit de la copie.
+for(let i = 0; i < produits2.length ; i++ )
+{
+    console.log(produits2[i].nom);
+    console.log(produits2[i].stock);
+}
+// • Dans la copie, passe le stock du Stylo à 6, ajoute une Gomme (ID 106, Papeterie, 5 DH, stock 8),
+for(let i = 0; i < produits2.length ; i++)
+{
+    if(produits2[i].nom === "Stylo")
+    {
+        produits2[i].stock = 6;
+    }
+}
+let gomme ={
+    id: 106,
+    nom: "Gomme",
+    categorie: "Papeterie",
+    prix: 5,
+    stock: 8
+
+}
+produits2.push(gomme);
+console.log(produits2);
+
+// puis retire le Sac (ID 104).
+let sac = produits2.findIndex((id) => id.id == 104 );
+produits2.splice(sac , 1);
+console.log(produits2);
+console.log(produits);
+
 
 
 

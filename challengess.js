@@ -62,6 +62,7 @@ console.log(categories);
 
 
 
+
 //challenge 2;
 // Affiche le nom et la ville de la boutique.
 console.log(boutique.nom);
@@ -77,6 +78,7 @@ if(boutique.ouverte === false)
 {
     console.log("Fermée");
 }
+
 
 
 
@@ -119,6 +121,21 @@ let sac = produits2.findIndex((id) => id.id == 104 );
 produits2.splice(sac , 1);
 console.log(produits2);
 console.log(produits);
+
+
+
+
+
+
+// • Avec filter(), garde les produits dont le stock est supérieur à 0.
+let produitssuperieur = produits.filter((element) => element.stock > 0);
+console.log("superior 0 : ", produitssuperieur);
+// • Fais un deuxième filtre pour garder les produits de la catégorie « Papeterie » dont le stock est
+// supérieur à 0.
+let produitscategorie = produitssuperieur.filter((element) => element.categorie === "Papeterie");
+console.log("les produits de la catégorie « Papeterie » : ", produitscategorie);
+// Indice. La fonction passée à filter() répond vrai ou faux pour chaque produit.
+// À vérifier. En rayon, tu obtiens Cahier, Trousse, Sac et Classeur. En papeterie, tu obtiens Cahier et Classeur.
 
 
 

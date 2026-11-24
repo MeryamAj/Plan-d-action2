@@ -195,6 +195,21 @@ console.log(with_findindex2);
 
 
 
+//challenge 8;
+// • Avec some(), vérifie si au moins un produit a un stock égal à 0.
+let result = produits.some((element) =>{
+    return element.stock === 0;
+})
+console.log(result);
+// Indice. La méthode renvoie un booléen dès qu’un produit satisfait la condition.
+// À vérifier. Le résultat est true
+
+
+
+
+
+
+
 
 
 

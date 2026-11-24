@@ -228,6 +228,25 @@ console.log(`Stocks strictement positifs : ${resultevery2}`);
 
 
 
+//challenge 10
+// • Avec filter(), isole les produits de papeterie en stock. Applique ensuite map() et reduce() à cette
+let papeteries = produits.filter((element) => element.categorie === "Papeterie" && element.stock > 0);
+console.log(papeteries);
+let resultmap = papeteries.map((element) => element.nom);
+console.log(resultmap);
+let resultreduce = papeteries.reduce((total,element) =>{
+      return (total + element.prix * element.stock);
+},0);
+console.log(`${resultreduce} DH`);
+
+
+
+
+
+
+
+
+
 
 
 

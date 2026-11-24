@@ -201,8 +201,32 @@ let result = produits.some((element) =>{
     return element.stock === 0;
 })
 console.log(result);
-// Indice. La méthode renvoie un booléen dès qu’un produit satisfait la condition.
-// À vérifier. Le résultat est true
+
+
+
+
+
+
+
+
+//challenge 9;
+// • Avec every(), vérifie que tous les prix sont strictement positifs, puis que tous les stocks sont
+// strictement positifs.
+let resultevery = produits.every((element) => {
+     return element.prix > 0;
+})
+let resultevery2 =produits.every((element) => {
+     return element.stock > 0;
+})
+console.log(`Prix strictement positifs : ${resultevery}`);
+console.log(`Stocks strictement positifs : ${resultevery2}`);
+
+
+
+
+
+
+
 
 
 

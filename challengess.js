@@ -164,7 +164,31 @@ console.log(`le nombre total d’unités disponibles: ${unites} `);
 let valeur_total = produits.reduce((total , element) => {
      return  (total + element.stock * element.prix);
 },0);
-console.log(`calcule la valeur totale du stock : ${valeur_total} DH`)
+console.log(`calcule la valeur totale du stock : ${valeur_total} DH`);
+
+
+
+
+
+
+
+
+
+
+//challenge 7;
+// • Avec find(), récupère le produit d’ID 103. Réessaie avec l’ID 999.
+const firstid = produits.find((element) => element.id == 103);
+const secendid = produits.find((element) => element.id == 999);
+console.log(firstid);
+console.log(secendid);
+// • Avec findIndex(), récupère la position de ces deux ID dans le tableau.
+const with_findindex1 = produits.findIndex((element) => element.id == 103);
+const with_findindex2 = produits.findIndex((element) => element.id == 999);
+
+console.log(with_findindex1);
+console.log(with_findindex2);
+
+
 
 
 

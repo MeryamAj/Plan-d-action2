@@ -147,7 +147,39 @@ let noms = produits.map((element) => element.nom );
 console.log("noms : ", noms);
 // • Avec un second map(), crée un tableau d’étiquettes au format « Nom - Prix DH ».
 let noms_prix = produits.map((element) => `${element.nom} - ${element.prix} DH`);
-console.log("noms_prix : ",noms_prix )
+console.log("noms_prix : ",noms_prix );
+
+
+
+
+
+
+
+//challenge 6
+// • Avec reduce(), calcule le nombre total d’unités disponibles.
+let unites = produits.reduce((sum , element) => {
+    return element.stock + sum;},0);
+console.log(`le nombre total d’unités disponibles: ${unites} `);
+// • Avec un second reduce(), calcule la valeur totale du stock. Pour chaque produit, multiplie son prix unitaire par son stock.
+let valeur_total = produits.reduce((total , element) => {
+     return  (total + element.stock * element.prix);
+},0);
+console.log(`calcule la valeur totale du stock : ${valeur_total} DH`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
